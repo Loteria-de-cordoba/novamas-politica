@@ -48,8 +48,9 @@
     }
     .brand .logo{
       width:40px; height:40px; border-radius:12px;
-      background: radial-gradient(120% 120% at 30% 20%, #0ea5e9, #22d3ee 60%, #0ea5e9 100%);
+      background: radial-gradient(120% 120% at 30% 20%, #ffffff, #bff0ff 60%, #92c4db 100%);
       box-shadow: var(--shadow);
+      display: flex; align-items:center; justify-content:center;
     }
     .brand h1{
       font-size: clamp(1.1rem, 1.2rem + 0.5vw, 1.6rem);
@@ -128,7 +129,9 @@
 
   <header class="site" aria-label="Encabezado del sitio">
     <div class="brand">
-      <div class="logo" aria-hidden="true"></div>
+      <div class="logo" aria-hidden="true">
+        <img src="novamas.webp" alt="Logotipo de NoVa+" style="width:80%; height:80%; border-radius:12px;" />
+      </div>
       <div>
         <h1>Política de Privacidad — <strong>NoVa+</strong></h1>
         <div class="version">Lotería de la Provincia de Córdoba S.A.U. &middot; Versión vigente: <strong>octubre 2025</strong></div>
