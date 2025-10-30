@@ -1,11 +1,309 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Política de Privacidad — NoVa+ | Lotería de la Provincia de Córdoba S.A.U.</title>
+  <meta name="description" content="Política de Privacidad de la aplicación NoVa+ de Lotería de la Provincia de Córdoba S.A.U. Versión vigente: octubre 2025." />
+
+  <style>
+    :root{
+      --bg: #0f172a;          /* slate-900 */
+      --panel: #111827;       /* gray-900 */
+      --muted: #94a3b8;       /* slate-400 */
+      --text: #e5e7eb;        /* gray-200 */
+      --accent: #22d3ee;      /* cyan-400 */
+      --accent-2:#06b6d4;     /* cyan-500 */
+      --card: #0b1220;
+      --border: #1f2937;
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.25);
+      --maxw: 1100px;
+    }
+
+    /* Reset suave */
+    *{ box-sizing: border-box; }
+    html, body{ margin:0; padding:0; background:var(--bg); color:var(--text); font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; line-height:1.55; }
+    a{ color: var(--accent); text-decoration: none; }
+    a:hover{ color: var(--accent-2); text-decoration: underline; }
+
+    /* Layout */
+    .wrap{
+      display: grid;
+      grid-template-columns: 290px 1fr;
+      gap: 28px;
+      max-width: var(--maxw);
+      margin: 40px auto;
+      padding: 0 18px 40px;
+    }
+
+    header.site{
+      max-width: var(--maxw);
+      margin: 28px auto 0;
+      padding: 0 18px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:14px;
+    }
+    .brand .logo{
+      width:40px; height:40px; border-radius:12px;
+      background: radial-gradient(120% 120% at 30% 20%, #0ea5e9, #22d3ee 60%, #0ea5e9 100%);
+      box-shadow: var(--shadow);
+    }
+    .brand h1{
+      font-size: clamp(1.1rem, 1.2rem + 0.5vw, 1.6rem);
+      margin:0;
+    }
+    .version{
+      color: var(--muted); font-size: .95rem; margin-top:6px;
+    }
+
+    /* Índice */
+    nav.toc{
+      position: sticky; top: 18px;
+      background: linear-gradient(180deg, var(--panel), #0b1325);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+      height: fit-content;
+    }
+    nav.toc h2{
+      font-size: 1rem; margin:0 0 10px; color: #cbd5e1; letter-spacing:.3px;
+    }
+    .toc a{
+      display:block; padding:8px 10px; border-radius:10px; color:#cbd5e1;
+    }
+    .toc a:hover{ background:#0f1a2f; }
+    .toc .sep{ height:1px; background:var(--border); margin:10px 0; opacity:.7; }
+
+    /* Contenido */
+    main{
+      background: linear-gradient(180deg, var(--panel), var(--card));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    section{
+      padding: 14px 6px 6px;
+      border-top: 1px solid var(--border);
+    }
+    section:first-of-type{ border-top: none; padding-top: 0; }
+    h2{
+      font-size: clamp(1.1rem, 1rem + .7vw, 1.6rem);
+      margin: 0 0 12px;
+      line-height:1.25;
+    }
+    h3{
+      font-size: 1.05rem; margin: 16px 0 8px; color:#cbd5e1;
+    }
+    p{ margin: 0 0 12px; color:#e7e9ee; }
+    ul{ margin: 8px 0 16px 20px; padding:0; }
+    li{ margin: 6px 0; }
+
+    .callout{
+      background: #0a162a; border:1px solid #0e223f; padding:12px 14px; border-radius:12px; color:#dbeafe;
+    }
+
+    .footer{
+      margin-top: 24px; padding-top: 16px; border-top:1px solid var(--border); color: var(--muted); font-size:.95rem;
+    }
+
+    /* Etiquetas y chips */
+    .chip{
+      display:inline-flex; align-items:center; gap:6px;
+      font-size:.85rem; color:#0c4a6e; background:#67e8f9; border-radius:999px; padding:4px 10px; font-weight:600;
+    }
+
+    /* Responsivo */
+    @media (max-width: 920px){
+      .wrap{ grid-template-columns: 1fr; }
+      nav.toc{ position: relative; top: 0; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello, World!</h1>
+
+  <header class="site" aria-label="Encabezado del sitio">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <div>
+        <h1>Política de Privacidad — <strong>NoVa+</strong></h1>
+        <div class="version">Lotería de la Provincia de Córdoba S.A.U. &middot; Versión vigente: <strong>octubre 2025</strong></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <!-- Índice -->
+    <nav class="toc" aria-label="Índice de secciones">
+      <h2>Contenido</h2>
+      <a href="#introduccion">Introducción</a>
+      <a href="#loteria">I. Lotería de la Provincia de Córdoba S.A.U.</a>
+      <a href="#derechos">II. Derechos del Usuario y Protección de Datos</a>
+      <a href="#uso-app">III. Uso de la Aplicación</a>
+      <div class="sep"></div>
+      <a href="#datos">1) Datos personales que se recopilan</a>
+      <a href="#finalidad">2) Finalidad del tratamiento</a>
+      <a href="#seguridad">3) Seguridad y confidencialidad</a>
+      <a href="#bloqueo">4) Mecanismo de bloqueo</a>
+      <a href="#permisos">5) Permisos solicitados</a>
+      <a href="#aclaraciones">6) Aclaraciones</a>
+      <a href="#control">7) Control y conservación</a>
+      <a href="#limitaciones">8) Limitaciones</a>
+      <a href="#publico">9) Público destinatario</a>
+      <a href="#modificaciones">10) Modificaciones</a>
+      <div class="sep"></div>
+      <a href="#suspension">IV. Suspensión y terminación</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- Contenido -->
+    <main role="main">
+      <section id="introduccion" aria-labelledby="intro-title">
+        <h2 id="intro-title">Introducción</h2>
+        <p><strong>NoVa+</strong> es una aplicación de <strong>Lotería de la Provincia de Córdoba S.A.U.</strong> destinada al bloqueo y control parental de acceso a sitios de apuestas ilegales, de forma gratuita. Nos comprometemos a proteger la privacidad de quienes la utilizan y a explicar cómo recopilamos, usamos y protegemos su información personal al instalarla y usarla.</p>
+        <p class="callout"><span class="chip">Actualización</span> Esta política puede cambiar; publicaremos los cambios en la App con su fecha de actualización. Última actualización: <strong>octubre de 2025</strong>.</p>
+      </section>
+
+      <section id="loteria">
+        <h2>I. Lotería de la Provincia de Córdoba S.A.U.</h2>
+        <p>Lotería de Córdoba es una Sociedad Anónima Unipersonal que organiza, administra y explota juegos de azar y apuestas en la Provincia de Córdoba, incluyendo juegos en línea regulados por la Ley 10.793, actuando como autoridad de aplicación.</p>
+        <p>Domicilio: Calle 27 de Abril Nº 185, Córdoba, con delegaciones en toda la provincia (consultables en el sitio oficial).</p>
+        <p>Inscripción AAIP: código <strong>RL-2021-34741661-APN-DNPDP#AAIP</strong>. CUIT: <strong>30-69432723-7</strong>.</p>
+        <p>Se enfatiza la concertación con otras jurisdicciones para erradicar el juego sin licencia y prevenir el juego por menores de edad.</p>
+      </section>
+
+      <section id="derechos">
+        <h2>II. Derechos del Usuario, Privacidad y Protección de Datos</h2>
+        <p>El tratamiento de datos personales en <strong>NoVa+</strong> se basa en: (a) consentimiento libre, expreso e informado; (b) ejecución del contrato de licencia; (c) cumplimiento de obligaciones legales aplicables a Lotería; y (d) interés legítimo en seguridad, funcionalidad y mejora del software.</p>
+        <p>Los datos se tratan para proveer, mantener y mejorar los servicios, generar estadísticas agregadas de uso, gestionar sugerencias de sitios a bloquear y enviar notificaciones sobre intentos de acceso a sitios bloqueados.</p>
+        <h3>Derechos ARCO y otros</h3>
+        <ul>
+          <li>Acceso a los datos personales almacenados por NoVa+.</li>
+          <li>Rectificación, actualización o supresión cuando corresponda.</li>
+          <li>Revocación del consentimiento.</li>
+          <li>Información sobre finalidad y destino de los datos.</li>
+          <li>Bloqueo o suspensión temporal del tratamiento.</li>
+        </ul>
+        <p>Para ejercer derechos: <a href="mailto:juego.online@loteriacba.com.ar">juego.online@loteriacba.com.ar</a>.</p>
+        <p class="callout"><strong>Seguridad contra fraudes:</strong> Lotería no solicitará datos de cuentas bancarias, proveedores de pago o de activos virtuales por WhatsApp, teléfono ni correo electrónico.</p>
+      </section>
+
+      <section id="uso-app">
+        <h2>III. Uso de la Aplicación</h2>
+        <p>El uso de <strong>NoVa+</strong> es <strong>gratuito</strong>. La persona usuaria o tutora mantiene el control total, pudiendo desinstalarla o ajustar su configuración en cualquier momento.</p>
+      </section>
+
+      <section id="datos">
+        <h2>1) Datos personales que se recopilan</h2>
+        <ul>
+          <li>Nombre de perfil.</li>
+          <li>Identificador del dispositivo (Device ID).</li>
+          <li>Historial de búsqueda.</li>
+          <li>Dirección de correo electrónico.</li>
+          <li>Información sobre sitios ilegales bloqueados (nombre del dispositivo, correo electrónico y fecha de bloqueo).</li>
+        </ul>
+      </section>
+
+      <section id="finalidad">
+        <h2>2) Finalidad del tratamiento</h2>
+        <ul>
+          <li>Autenticación y acceso seguro.</li>
+          <li>Registro de intentos de acceso a sitios de apuestas/casinos ilegales.</li>
+          <li>Generación de estadísticas anónimas para mejorar el sistema.</li>
+          <li>Información general al administrador sobre dominios bloqueados y su frecuencia.</li>
+        </ul>
+        <p>Las estadísticas son globales y con fines de mejora de la aplicación.</p>
+      </section>
+
+      <section id="seguridad">
+        <h2>3) Seguridad y confidencialidad</h2>
+        <ul>
+          <li>Contraseñas almacenadas con <em>hash</em> seguro (nunca en texto plano).</li>
+          <li>Autenticación mediante tokens <strong>JWT</strong>.</li>
+          <li>Bloqueo de sitios ejecutado localmente en el dispositivo.</li>
+          <li>No se comparten datos personales con terceros; uso interno exclusivo.</li>
+        </ul>
+      </section>
+
+      <section id="bloqueo">
+        <h2>4) Mecanismo de bloqueo implementado</h2>
+        <p>NoVa+ usa una <strong>VPN local de capa de red (Layer 3)</strong> con <code>android.net.VpnService</code>, que intercepta y filtra tráfico antes de salir del dispositivo.</p>
+        <ul>
+          <li><strong>Bloqueo DNS</strong> (UDP/53): analiza consultas y responde <code>NXDOMAIN</code> a dominios bloqueados.</li>
+          <li><strong>Bloqueo HTTPS/TLS con inspección SNI</strong> (TCP/443): inspección del campo SNI del handshake TLS y cierre de conexiones a dominios bloqueados.</li>
+        </ul>
+        <p>Se registran intentos, se notifican al usuario y se generan estadísticas locales. La lista de dominios se <strong>actualiza automáticamente cada hora</strong> desde el backend y se almacena en el dispositivo (sin reiniciar la VPN).</p>
+      </section>
+
+      <section id="permisos">
+        <h2>5) Justificación técnica de permisos solicitados</h2>
+        <ul>
+          <li><code>android.permission.BIND_VPN_SERVICE</code> — creación del túnel VPN.</li>
+          <li><code>android.permission.INTERNET</code> — conexión a servidores legítimos.</li>
+          <li><code>android.permission.FOREGROUND_SERVICE</code> — ejecución continua de la VPN.</li>
+          <li><code>android.permission.ACCESS_NETWORK_STATE</code> — detección de cambios de red.</li>
+          <li><code>android.permission.POST_NOTIFICATIONS</code> — alertas de bloqueo.</li>
+          <li><code>android.permission.RECEIVE_BOOT_COMPLETED</code> — reinicio automático del servicio.</li>
+          <li><code>android.permission.BIND_DEVICE_ADMIN</code> — prevenir desinstalaciones no autorizadas.</li>
+          <li><code>android.permission.BIND_ACCESSIBILITY_SERVICE</code> — detectar intentos de eliminación.</li>
+          <li><code>android.permission.SYSTEM_ALERT_WINDOW</code> — advertencias persistentes.</li>
+          <li><code>android.permission.QUERY_ALL_PACKAGES</code> — detectar herramientas que intenten evadir el bloqueo.</li>
+        </ul>
+      </section>
+
+      <section id="aclaraciones">
+        <h2>6) Aclaraciones</h2>
+        <ul>
+          <li>No se utiliza inteligencia artificial ni <em>machine learning</em>.</li>
+          <li>No se modifica el DNS del sistema.</li>
+          <li>El servicio de accesibilidad no bloquea contenido: solo detecta intentos de desinstalación.</li>
+        </ul>
+      </section>
+
+      <section id="control">
+        <h2>7) Control y conservación</h2>
+        <p>La persona usuaria/tutora mantiene el control mediante un PIN. Los datos se conservan mientras la aplicación esté activa o hasta su eliminación por el usuario.</p>
+      </section>
+
+      <section id="limitaciones">
+        <h2>8) Limitaciones</h2>
+        <p>NoVa+ <strong>no</strong> accede a contactos ni calendarios, no registra hábitos de uso, no recopila ubicación y no crea perfiles de usuario. Su uso es totalmente gratuito.</p>
+      </section>
+
+      <section id="publico">
+        <h2>9) Público destinatario</h2>
+        <p>La app está dirigida a todo público y posee clasificación <strong>PEGI 3</strong>, siendo segura para menores de edad.</p>
+      </section>
+
+      <section id="modificaciones">
+        <h2>10) Modificaciones</h2>
+        <p>Lotería de la Provincia de Córdoba S.A.U. puede modificar esta Política. Los cambios se publicarán en esta misma página; recomendamos revisarla periódicamente.</p>
+      </section>
+
+      <section id="suspension">
+        <h2>IV. Suspensión y terminación</h2>
+        <p>La persona usuaria deberá desinstalar el software en todos sus dispositivos para terminar el uso. Lotería puede suspender o terminar el acceso a NoVa+ ante:</p>
+        <ul>
+          <li>Incumplimiento material de los términos de la licencia.</li>
+          <li>Actividades fraudulentas o intentos de manipulación del software.</li>
+          <li>Riesgos de seguridad que comprometan la integridad del software o de otros usuarios.</li>
+          <li>Requerimientos legales o de autoridades competentes.</li>
+        </ul>
+        <p>La terminación no afecta cláusulas que deban sobrevivir (propiedad intelectual, limitación de responsabilidad, legislación aplicable).</p>
+      </section>
+
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Si tenés dudas sobre esta Política o el tratamiento de tus datos, escribinos a <a href="mailto:juego.online@loteriacba.com.ar">juego.online@loteriacba.com.ar</a>.</p>
+      </section>
+
+      <div class="footer">
+        © 2025 Lotería de la Provincia de Córdoba S.A.U. — Política de Privacidad NoVa+ · Versión vigente: octubre 2025.
+      </div>
+    </main>
+  </div>
 </body>
 </html>
